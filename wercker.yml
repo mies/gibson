@@ -7,4 +7,4 @@ build:
         code: sudo docker version
     - script:
         name: build container
-        code: sudo docker build -t="mies/gibson"
+        code: sudo docker build -t="mies/gibson" .
