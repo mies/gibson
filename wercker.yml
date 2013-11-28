@@ -1,0 +1,15 @@
+box: wercker-labs/docker
+box-type: ami
+build:
+  steps:
+    - script:
+        name: docker version
+        code: sudo docker version
+    - script:
+        name: go build
+        code: |
+           go get
+           go build -o main
+    - script:
+        name: build container
+        code: sudo docker build -t="mies/gibson"
