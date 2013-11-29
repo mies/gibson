@@ -24,6 +24,7 @@ RUN echo 'export PATH="$PATH:$GOPATH/bin"' | sudo tee -a /etc/profile
 RUN mkdir -p "$HOME/go/{src,pkg,bin}"
 
 ADD . /src
-RUN cd /src; go build main.go
+# RUN cd /src; go build main.go
+RUN cd go build main.go
 EXPOSE 5000
-CMD ["./main"]
+# CMD ["./main"]

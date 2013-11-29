@@ -9,6 +9,9 @@ build:
         name: build container
         code: sudo docker build -t="mies/gibson" .
     - script:
-        name: list wercker output dir
-        code: ls $WERCKER_OUTPUT_DIR
+        name: save container in wercker output dir
+        code: |
+          cd $WERCKER_OUTPUT_DIR
+          sudo docker save "mies/gibson" > gibson.tar
+          ls $WERCKER_OUTPUT_DIR
 
