@@ -22,3 +22,8 @@ RUN echo 'export PATH="$PATH:$GOPATH/bin"' | sudo tee -a /etc/profile
 
 # Make actual go workspace dir structure
 RUN mkdir -p "$HOME/go/{src,pkg,bin}"
+
+ADD . /src
+RUN cd /src; go build main.go
+EXPOSE 5000
+CMD ["./main"]
