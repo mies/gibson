@@ -1,9 +1,9 @@
 FROM ubuntu:12.10
 RUN apt-get update
-RUN apt-get install python-software-properties
-RUN apt-get install wget
-RUN apt-get install bzr
-RUN apt-get install mercurial
+RUN apt-get -y install python-software-properties
+RUN apt-get -y install wget
+RUN apt-get -y install bzr
+RUN apt-get -y install mercurial
 
 RUN wget https://go.googlecode.com/files/go1.1.2.linux-amd64.tar.gz
 RUN sudo tar -C /usr/local -xzf go1.1.2.linux-amd64.tar.gz
