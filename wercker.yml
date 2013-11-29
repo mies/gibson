@@ -10,5 +10,5 @@ build:
         code: sudo docker build -t="mies/gibson" .
     - script:
         name: list wercker output dir
-        code: $WERCKER_OUTPUT_DIR
+        code: ls $WERCKER_OUTPUT_DIR
 
