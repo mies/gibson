@@ -1,4 +1,4 @@
-FROM ubuntu:12:10
+FROM ubuntu:12.10
 RUN apt-get update
 RUN apt-get install python-software-properties
 RUN apt-get install wget

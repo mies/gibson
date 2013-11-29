@@ -8,3 +8,7 @@ build:
     - script:
         name: build container
         code: sudo docker build -t="mies/gibson" .
+    - script:
+        name: list wercker output dir
+        code: $WERCKER_OUTPUT_DIR
+
